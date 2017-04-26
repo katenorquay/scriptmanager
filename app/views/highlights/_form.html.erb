@@ -11,6 +11,18 @@
     </div>
   <% end %>
 
+  <p class='highlight'>Highlight</p>
+  <div class='popup'>
+    <div class='fields'>
+      <%= f.text_field :text %>
+      <%= f.text_field :color_code%>
+      <%= f.text_field :comment%>
+    </div>
+    <div class='fields'>
+      <%= f.text_field :script_id, placeholder: "#{@script.id}" %>
+    </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

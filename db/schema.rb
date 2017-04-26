@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422021431) do
+ActiveRecord::Schema.define(version: 20170426033819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20170422021431) do
     t.string   "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "script_id"
+    t.index ["script_id"], name: "index_highlights_on_script_id", using: :btree
   end
 
   create_table "scripts", force: :cascade do |t|
@@ -30,4 +32,5 @@ ActiveRecord::Schema.define(version: 20170422021431) do
     t.text     "content"
   end
 
+  add_foreign_key "highlights", "scripts"
 end

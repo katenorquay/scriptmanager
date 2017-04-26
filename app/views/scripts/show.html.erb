@@ -3,7 +3,7 @@
 <h2><%= @script.title %><h2>
 <p><%= @script.content %></p>
 
-<button class='highlight'>Highlight</button>
-
 <%= link_to 'Edit', edit_script_path(@script) %> |
 <%= link_to 'Back', scripts_path %>
+
+<%= render 'highlights/form', highlight: @script.highlights.build %>

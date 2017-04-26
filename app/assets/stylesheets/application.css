@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+.popup {
+  background-color: purple;
+  width: 300px;
+  text-align: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.popup input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
